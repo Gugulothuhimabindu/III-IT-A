@@ -1,0 +1,28 @@
+%{
+ #define NUMBER 400
+ #define COMMENT 401
+ #define TEXT 402
+ #define COMMAND 403
+ %}
+ %%
+  [0-9]+ |
+ [0-9]+\.[0-9]+ |
+ \.[0-9]+ { return NUMBER; }
+ #.* { return COMMENT; }
+ \"[^\"\n]*\" { return TEXT; }
+ [a-zA-Z][a-zA-Z0-9]+ { return COMMAND;}
+  %%
+int yywrap(void){}
+
+ #include <stdio.h>
+ void main(argc,argv)
+ int argc;
+ char *argv[];
+ {
+ int val;
+ while(val = yylex()) 
+printf ("value is %d\n",val);
+ }
+
+
+
