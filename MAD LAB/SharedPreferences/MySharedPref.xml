@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="gender_female" value="true" />
+    <string name="name">Aparna</string>
+    <boolean name="gender_male" value="false" />
+    <int name="age" value="20" />
+</map>
